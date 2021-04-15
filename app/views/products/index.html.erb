@@ -14,12 +14,7 @@
 
   <tbody>
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name_product %></td>
-        <td><%= product.price %></td>
-        <td><%= product.amount %></td>
-       
-      </tr>
+      <%= render 'product', product: product %>
     <% end %>
   </tbody>
 </table>
@@ -27,3 +22,5 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<div id="product-content"></div>
+
